@@ -10,6 +10,7 @@ export default async (req, res) => {
     await new MailchimpProvider().subscribe(email);
     return res.status(201).json({ error: '' });
   } catch (error) {
+    console.log(error);
     return res.status(500).json({ error: error.message || error.toString() });
   }
 };

@@ -23,5 +23,5 @@ module.exports = {
   },
   videoType: 'youtube',
   // Use for sitemap generation
-  websiteUrl: 'https://picocourses.com',
+  websiteUrl: 'https://k8s.picocourses.com',
 };

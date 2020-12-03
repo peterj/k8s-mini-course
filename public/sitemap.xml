@@ -3,63 +3,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>https://ihatetomatoes-nextjs-101.vercel.app/</loc>
+        <loc>https://picocourses.com/</loc>
     </url>
             
     <url>
-        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/app-and-document</loc>
+        <loc>https://picocourses.com/post/about-pods</loc>
     </url>
             
     <url>
-        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/convertkit-api-variables</loc>
+        <loc>https://picocourses.com/post/about-replicasets</loc>
     </url>
             
     <url>
-        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/customising-colors-tailwindcss</loc>
+        <loc>https://picocourses.com/post/architecture</loc>
     </url>
             
     <url>
-        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/introduction</loc>
+        <loc>https://picocourses.com/post/creating-pods</loc>
     </url>
             
     <url>
-        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/layout-and-hero</loc>
+        <loc>https://picocourses.com/post/creating-replicasets</loc>
     </url>
             
     <url>
-        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/link-and-router</loc>
+        <loc>https://picocourses.com/post/deployment-strategies</loc>
     </url>
             
     <url>
-        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/nextjs-react-hook-form</loc>
+        <loc>https://picocourses.com/post/deployments</loc>
     </url>
             
     <url>
-        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/project-setup</loc>
+        <loc>https://picocourses.com/post/introduction</loc>
     </url>
             
     <url>
-        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/react-query-mutation</loc>
+        <loc>https://picocourses.com/post/labels</loc>
     </url>
             
     <url>
-        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/subscribe-api-endpoint</loc>
+        <loc>https://picocourses.com/post/prerequisites</loc>
     </url>
             
     <url>
-        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/subscribe-api-part-2</loc>
+        <loc>https://picocourses.com/post/resources-info</loc>
     </url>
             
     <url>
-        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/subscribe-form-styles</loc>
+        <loc>https://picocourses.com/post/services</loc>
     </url>
             
     <url>
-        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/tailwindcss-intro</loc>
-    </url>
-            
-    <url>
-        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/thank-you</loc>
+        <loc>https://picocourses.com/post/thank-you</loc>
     </url>
             
 </urlset>
