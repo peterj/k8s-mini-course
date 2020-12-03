@@ -1,27 +1,27 @@
 module.exports = {
-  siteName: "Next.js 101 - Free Online Course",
-  siteDescription: "Learn how to build a simple landing page with Next.js",
-  author: "Petr Tichy",
-  authorTitle: "Front-end Developer",
-  authorImg: "/assets/author/img_petr-tichy-bio.png",
+  siteName: 'Kubernetes 101 - Free Online Course',
+  siteDescription: 'Learn the basics of Kubernetes',
+  author: 'Peter Jausovec',
+  authorTitle: 'Full-Stack Developer',
+  authorImg: '/assets/author/peterj.jpg',
   shortBio:
-    "Petr is a passionate front-end developer who likes to build cool products and teach along the way.",
+    'Peter is a software engineer focused on developing distributed systems and cloud-native solutions using Docker, Kubernetes, and Istio. I am an author of multiple books, speaker, and trainer.',
   outcomes: [
-    "How to build this landing page with Next.js",
-    "How to create API endpoint and integrate with ConvertKit API",
-    "How to use React Hook Form and TailwindCSS",
+    'What is Kubernetes?',
+    'How is Kubernetes architected?',
+    'How to use basic Kubernetes resources?',
   ],
-  logo: "/assets/img_logo.svg",
-  coverImage: "/assets/img_nextjs-101-cover.png",
+  logo: '/assets/img_logo.svg',
+  coverImage: '/assets/course-cover.png',
   ogImage:
-    "https://ihatetomatoes-nextjs-101.vercel.app/assets/img_og-next-101.jpg",
+    'https://startkubernetes.com/static/twitter-card-b76680e2393c3ab94bb9035ba9a02c90.png',
   social: {
-    website: "https://ihatetomatoes.net",
-    twitter: "https://twitter.com/ihatetomatoes",
-    facebook: "https://www.facebook.com/ihatetomatoesblog",
-    twitch: "https://twitch.tv/iht_blog/",
-    youtube:
-      "https://www.youtube.com/channel/UC7O6CntQoAI-wYyJxYiqNUg?sub_confirmation=1",
+    website: 'https://startkubernetes.com',
+    twitter: 'https://twitter.com/pjausovec',
+    facebook: 'https://www.facebook.com/learncloudnative',
+    youtube: 'https://www.youtube.com/c/PeterJausovec?sub_confirmation=1',
   },
-  videoType: "youtube",
+  videoType: 'youtube',
+  // Use for sitemap generation
+  websiteUrl: 'https://picocourses.com',
 };

@@ -1,40 +1,29 @@
 ---
-id: "14"
-order: 14
+id: "13"
+order: 13
 title: 'Final Words'
 excerpt: 'Next steps and other learning resources.'
 coverImage: ''
 module: 'Next Steps'
-videoId: 'HZGs5htTEYY'
-duration: '14:07'
+videoId: ''
+duration: ''
 ---
 
 ## Feedback
 
-Have you enjoyed this mini courses? Let me know on twitter or through my other links below.
+Have you enjoyed this mini course? Let me know on [Twitter](https://twitter.com/pjausovec) or through my other links below.
 
-And if you enjoyed it, please help to spread the word.
+And if you enjoyed it, please help to spread the word. This mini-course is based on my book and video course called [Start Kubernetes](https://gum.co/kubernetes).
 
 Thank you, you are awesome!
 
 ## Let's connect
 
-- Follow me on Twitter - [@Ihatetomatoes](https://twitter.com/ihatetomatoes)
-- Subscribe to my [YouTube channel](https://www.youtube.com/channel/UC7O6CntQoAI-wYyJxYiqNUg)
-- Visit my site [ihatetomatoes.net](https://ihatetomatoes.net/)
-- Check out some of [my other courses](https://ihatetomatoes.net/store/)
+- Follow me on Twitter - [@pjausovec](https://twitter.com/pjausovec)
+- Subscribe to my [YouTube channel](https://www.youtube.com/c/PeterJausovec?sub_confirmation=1)
+- Visit my site [learncloudnative.com](https://learncloudnative.com/)
+- Check out my [Learn Istio course](https://gum.co/learnistio)
 
-## Other Next.js learning resources
+## About this mini-course template
 
-- [Tailwind Labs](https://www.youtube.com/channel/UCOe-8z68tgw9ioqVvYM4ddQ) on YouTube
-- [Lee Robinson](https://www.youtube.com/user/MaStaleee/videos) on YouTube
-- [James Q Quick](https://www.youtube.com/c/JamesQQuick) on YouTube
-- [Leigh Halliday](https://www.youtube.com/c/leighhalliday/) on YouTube
-
-Feel free to [submit PR](https://github.com/Ihatetomatoes/nextjs-101) with other useful learning resources.
-
-## For content creators
-
-If you are a content creator, feel free to [use this app](https://github.com/Ihatetomatoes/nextjs-101) to create courses for your audience.
-
-If you have any questions how to use it, get in touch.
+This course is based on a [template](https://github.com/Ihatetomatoes/nextjs-101) created by [@Ihatetomatoes](https://twitter.com/ihatetomatoes).

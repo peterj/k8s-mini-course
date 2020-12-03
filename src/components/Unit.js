@@ -9,14 +9,14 @@ const Unit = ({ unit, index, isCompleted }) => {
   const { slug, title, excerpt } = unit;
 
   return (
-    <li className="border border-gray-200 border-t-0 relative z-10">
+    <li className="relative z-10 border border-t-0 border-gray-200">
       <Link key={slug} href={`post/${slug}`}>
         <a
-          className="relative block p-2 px-4 hover:bg-gray-100 transition-colors duration-200"
+          className="relative block p-2 px-4 transition-colors duration-200 hover:bg-gray-100"
           href={`post/${slug}`}
         >
           <span className="flex">
-            <span className="opacity-75 text-gray-200 text-4xl text-right w-12 self-center flex-shrink-0">
+            <span className="self-center flex-shrink-0 w-12 text-4xl text-right text-gray-200 opacity-75">
               {index + 1}
             </span>
             <span className="self-center pl-4">
@@ -26,7 +26,7 @@ const Unit = ({ unit, index, isCompleted }) => {
                 {excerpt}
               </span>
             </span>
-            <span className="ml-auto self-center">
+            <span className="self-center ml-auto">
               <UnitProgress isCompleted={isCompleted} />
             </span>
           </span>

@@ -36,7 +36,6 @@ const SocialLink = ({ type }) => {
 };
 
 const SocialIcons = () => {
-  Object.keys(social).map((s) => console.log(s));
   return (
     <div className='w-full mt-2 sm:ml-auto'>
       <ul className='flex m-0'>

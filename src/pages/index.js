@@ -1,46 +1,48 @@
-import { Author, Header, Hero, Layout, Module, Unit } from "@components/index";
-import { author, ogImage, siteDescription, siteName } from "@config";
-import useLocalStorage from "@hooks/useLocalStorage";
-import { getAllPosts } from "@lib/api";
-import Head from "next/head";
-import React from "react";
+import { Author, Header, Hero, Layout, Module, Unit } from '@components/index';
+import {
+  author,
+  ogImage,
+  siteDescription,
+  siteName,
+  websiteUrl,
+} from '@config';
+import useLocalStorage from '@hooks/useLocalStorage';
+import { getAllPosts } from '@lib/api';
+import Head from 'next/head';
+import React from 'react';
 
 export default function Home({ allPosts }) {
-  const [progress] = useLocalStorage("progress", []);
+  const [progress] = useLocalStorage('progress', []);
 
   return (
     <Layout>
       <Head>
         <title>{`${siteName} by ${author}`}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.png' />
         <meta
-          name="description"
+          name='description'
           content={siteDescription}
-          key="descriptionMeta"
+          key='descriptionMeta'
         />
+        <meta property='og:url' content={websiteUrl} key='url' />
+        <meta property='og:type' content='website' key='website' />
         <meta
-          property="og:url"
-          content="https://ihatetomatoes-nextjs-101.vercel.app/"
-          key="url"
-        />
-        <meta property="og:type" content="website" key="website" />
-        <meta
-          property="og:title"
+          property='og:title'
           content={`${siteName} by ${author}`}
-          key="title"
+          key='title'
         />
-        <meta property="og:image" content={ogImage} key="image" />
+        <meta property='og:image' content={ogImage} key='image' />
         <meta
-          property="og:description"
+          property='og:description'
           content={siteDescription}
-          key="description"
+          key='description'
         />
       </Head>
-      <main className="bg-white p-4 sm:p-8 min-h-full col-span-8 col-start-2">
+      <main className='min-h-full col-span-8 col-start-2 p-4 bg-white sm:p-8'>
         <Header />
         <Hero />
         {allPosts && (
-          <ol className="mb-4">
+          <ol className='mb-4'>
             {allPosts.map((unit, index) => {
               const isCompleted = progress.find((u) => u.path === unit.slug);
               const item = unit.module ? (
@@ -68,12 +70,12 @@ export default function Home({ allPosts }) {
 
 export async function getStaticProps() {
   const allPosts = getAllPosts([
-    "title",
-    "slug",
-    "module",
-    "order",
-    "coverImage",
-    "excerpt",
+    'title',
+    'slug',
+    'module',
+    'order',
+    'coverImage',
+    'excerpt',
   ]);
 
   return {

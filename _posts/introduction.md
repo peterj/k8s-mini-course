@@ -1,82 +1,32 @@
 ---
 id: "1"
 order: 1
-title: 'Introduction'
-excerpt: 'Why to use Next.js and what we will cover.'
+title: 'Kubernetes Introduction'
+excerpt: 'What is container orchestration and Kubernetes.'
 coverImage: ''
-module: 'Introduction and Setup'
-videoId: 'eOuMsjtfGTI'
-duration: '05:24'
+module: 'Getting Started'
+videoId: ''
+duration: ''
 ---
 
-## Why Next.js
+## What is container orchestration?
 
-![Next.js - React Framework](/assets/course/introduction/img_nextjs.png)
+Containers are everywhere these days. People use tools such as [Docker](https://docker.com) for packaging anything from applications to databases. With the growing popularity of microservice architecture and moving away from the monolithic applications, a monolith application is now a collection of multiple smaller services.
 
-[Next.js](https://nextjs.org/) is a React framework, that simplifies a lot things that **you would need to add** to most React apps and projects.
+Managing a single application has its issues and challenges, let alone managing tens of smaller services that have to work together. You need a way to automate and manage your deployments, figure out how to scale individual services, use the network, connect them, and so on.
 
-For example if you need:
+The container orchestration can help you do this. Container orchestration can help you manage the lifecycles of your containers. Using a container orchestration system allows you to do the following:
 
-- **multiple routes**, bring in [React Router](https://reactrouter.com/)
-- **dynamic routes**, configure `React Router`
-- **optimize images**, do it yourself
-- **SEO optimization**, bring in [React Helmet](https://github.com/nfl/react-helmet)
-- **prefetch links**, configure it yourself
+- Provision and deploy containers based on available resources
+- Perform health monitoring on containers
+- Load balancing and service discovery
+- Allocate resources between different containers
+- Scaling the containers up and down
 
-`Next.js` gives you **all of this out of the box**:
+A couple of examples of container orchestrators are [Marathon](https://mesosphere.github.io/marathon/), [Swarm](https://docs.docker.com/get-started/swarm-deploy/) and the one discussed in this course, [Kubernetes](https://kubernetes.io).
 
-- **file based routing**, create `pages/index.js`
-- **dynamic route segments**, create `pages/post/[slug].js`
-- **image optimization**, use `<Image />` from `next/image`
-- **link prefetching**, use `<Link />` from `next/link`
-- **static site generation** or server side rendering
+[Kubernetes](https://kubernetes.io) is an open-source project and one of the popular choices for cluster management and scheduling container-centric workloads. You can use Kubernetes to run your containers, do zero-downtime deployments where you can update your application without impacting your users, and bunch of other cool stuff.
 
-There is plenty of **other benefits**, but in this course we will focus mainly on the above.
+![Kubernetes Numerony](/assets/course/1/k8s-numeronym.png)
 
-> `React` is great for `SPA` (single page applications), `Next.js` is great for projects where `SEO matters`.
-
-## When to use React vs Next.js
-
-React | Next.js
---- | ---
-**One** `<div id="root" />` entry | **Full HTML** on the page
-**Single page applications** (SPA) | SPA **or** pre rendered
-**Dashboards** | **SEO** benefits
-Apps **behind** login | Statically **generated sites**
-**Client side** rendering (CSR) | Choose between **CSR or SSR**
-
-## This course is not
-
-- a complete guide to **Next.js** or **React.js**
-- a complete guide to **TailwindCSS**
-- a **full-stack** course teaching your **everything**
-
-## Who is this course for
-
-- Next.js beginners **with some React knowledge**
-- anyone who wants to **learn about modern front-end development**
-- anyone who wants to **build a practical component** from **start to finish**
-
-## What you will build
-
-In this Next.js mini course we will **create a simple landing page** with **email signup form**.
-
-![Final Demo](/assets/course/introduction/img_final-demo.png)
-
-### What you will use
-
-- [Create Next App](https://nextjs.org/docs/api-reference/create-next-app)
-- [TailwindCSS](https://tailwindcss.com/) for **styling**
-- [React Hooks Form](https://react-hook-form.com/) for client side **validation**
-- [React Query](https://react-query.tanstack.com/) to **integrate** our form with [ConvertKit](convertkit.com) API
-- **Deploy** everything to [Vercel](https://vercel.com/)
-
-### What do you need
-
-If you **want to follow step by step** from start to finish **you will need**:
-
-- [Github](http://github.com/) account
-- [Vercel](https://vercel.com/) account
-- [ConvertKit](https://convertkit.com/) account
-
-**Excited to learn** Next.js? **Lets setup the project** in the next unit.
+>Frequently, people refer to Kubernetes as "K8S". K8S is a **numeronym** for Kubernetes. The first (K) and the last letter (S) are the first, and the last letters in the word Kubernetes, and 8 is the number of characters between those two letters. Other popular numeronyms are "i18n" for internationalization or "a11y" for accessibility.
