@@ -5,7 +5,7 @@ import { withRouter } from 'next/router';
 import React from 'react';
 import { CourseProgress, ResetProgressBtn } from './';
 
-const FEEDBACK_FISH_ID = process.env.FEEDBACK_FISH_ID;
+const FEEDBACK_FISH_ID = process.env.NEXT_PUBLIC_FEEDBACK_FISH_ID;
 
 const ProgressMarker = ({ isCurrent, isCompleted }) => {
   const markerClass = classNames({

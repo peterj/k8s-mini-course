@@ -2,7 +2,6 @@ import fetch from 'isomorphic-unfetch';
 import crypto from 'crypto';
 
 import { MailingListProvider } from './mailingListProvider';
-import { cachedDataVersionTag } from 'v8';
 
 const MAILCHIMP_SERVER_NAME = process.env.MAILCHIMP_SERVER_NAME;
 const MAILCHIMP_API_KEY = process.env.MAILCHIMP_API_KEY;
@@ -21,29 +20,36 @@ export class MailchimpProvider implements MailingListProvider {
 
   private async addSubscriber(email: string, tag: string) {
     const url = `https://${MAILCHIMP_SERVER_NAME}.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members`;
-    const response = await fetch(url, {
-      body: JSON.stringify({
-        email_address: email,
-        // Requires user to confirm the email address (set to 'subscribed' to skip it).
-        status: 'pending',
-        tags: [
-          {
-            name: cachedDataVersionTag,
-            status: 'active',
-          },
-        ],
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: this.getAuthToken(MAILCHIMP_API_KEY),
-      },
-      method: 'POST',
+    const tags = JSON.stringify({
+      name: tag,
+      status: 'active',
     });
 
-    if (response.status === 200) {
-      return true;
+    const data = {
+      email_address: email,
+      // Requires user to confirm the email address (set to 'subscribed' to skip it).
+      status: 'pending',
+      tags: [tags],
+    };
+
+    try {
+      const response = await fetch(url, {
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: this.getAuthToken(MAILCHIMP_API_KEY),
+        },
+        method: 'POST',
+      });
+
+      if (response.status === 200) {
+        return true;
+      }
+      return false;
+    } catch (error) {
+      console.error(error);
+      return false;
     }
-    return false;
   }
 
   /**
@@ -55,25 +61,27 @@ export class MailchimpProvider implements MailingListProvider {
     const subscriberHash = this.getMd5Hash(email);
     const url = `https://${MAILCHIMP_SERVER_NAME}.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members/${subscriberHash}/tags`;
 
-    const response = await fetch(url, {
-      body: JSON.stringify({
-        tags: [
-          {
-            name: tag,
-            status: 'active',
-          },
-        ],
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: this.getAuthToken(MAILCHIMP_API_KEY),
-      },
-      method: 'POST',
-    });
-    if (response.status !== 204) {
+    try {
+      await fetch(url, {
+        body: JSON.stringify({
+          tags: [
+            {
+              name: tag,
+              status: 'active',
+            },
+          ],
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: this.getAuthToken(MAILCHIMP_API_KEY),
+        },
+        method: 'POST',
+      });
+      return true;
+    } catch (error) {
+      console.error(error);
       return false;
     }
-    return true;
   }
 
   /**
@@ -83,17 +91,20 @@ export class MailchimpProvider implements MailingListProvider {
   private async subscriberExists(email: string): Promise<boolean> {
     const subscriberHash = this.getMd5Hash(email);
     const url = `https://${MAILCHIMP_SERVER_NAME}.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members/${subscriberHash}`;
-    const response = await fetch(url, {
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: this.getAuthToken(MAILCHIMP_API_KEY),
-      },
-      method: 'GET',
-    });
-    if (response.status === 404) {
+
+    try {
+      const response = await fetch(url, {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: this.getAuthToken(MAILCHIMP_API_KEY),
+        },
+        method: 'GET',
+      });
+      return response.status === 200;
+    } catch (error) {
+      console.error(error);
       return false;
     }
-    return true;
   }
 
   /**

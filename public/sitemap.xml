@@ -3,59 +3,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>https://picocourses.com/</loc>
+        <loc>https://k8s.picocourses.com/</loc>
     </url>
             
     <url>
-        <loc>https://picocourses.com/post/about-pods</loc>
+        <loc>https://k8s.picocourses.com/post/about-pods</loc>
     </url>
             
     <url>
-        <loc>https://picocourses.com/post/about-replicasets</loc>
+        <loc>https://k8s.picocourses.com/post/about-replicasets</loc>
     </url>
             
     <url>
-        <loc>https://picocourses.com/post/architecture</loc>
+        <loc>https://k8s.picocourses.com/post/architecture</loc>
     </url>
             
     <url>
-        <loc>https://picocourses.com/post/creating-pods</loc>
+        <loc>https://k8s.picocourses.com/post/creating-pods</loc>
     </url>
             
     <url>
-        <loc>https://picocourses.com/post/creating-replicasets</loc>
+        <loc>https://k8s.picocourses.com/post/creating-replicasets</loc>
     </url>
             
     <url>
-        <loc>https://picocourses.com/post/deployment-strategies</loc>
+        <loc>https://k8s.picocourses.com/post/deployment-strategies</loc>
     </url>
             
     <url>
-        <loc>https://picocourses.com/post/deployments</loc>
+        <loc>https://k8s.picocourses.com/post/deployments</loc>
     </url>
             
     <url>
-        <loc>https://picocourses.com/post/introduction</loc>
+        <loc>https://k8s.picocourses.com/post/introduction</loc>
     </url>
             
     <url>
-        <loc>https://picocourses.com/post/labels</loc>
+        <loc>https://k8s.picocourses.com/post/labels</loc>
     </url>
             
     <url>
-        <loc>https://picocourses.com/post/prerequisites</loc>
+        <loc>https://k8s.picocourses.com/post/prerequisites</loc>
     </url>
             
     <url>
-        <loc>https://picocourses.com/post/resources-info</loc>
+        <loc>https://k8s.picocourses.com/post/resources-info</loc>
     </url>
             
     <url>
-        <loc>https://picocourses.com/post/services</loc>
+        <loc>https://k8s.picocourses.com/post/services</loc>
     </url>
             
     <url>
-        <loc>https://picocourses.com/post/thank-you</loc>
+        <loc>https://k8s.picocourses.com/post/thank-you</loc>
     </url>
             
 </urlset>
