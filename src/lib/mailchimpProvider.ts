@@ -120,7 +120,6 @@ export class MailchimpProvider implements MailingListProvider {
    * @param apiKey
    */
   private getAuthToken(apiKey: string): string {
-    const buffer = Buffer.from(`key:${apiKey}`);
-    return `Basic ${buffer.toString('base64')}`;
+    return `Basic ${apiKey}`;
   }
 }
