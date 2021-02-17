@@ -2,7 +2,7 @@ import { GA_TRACKING_ID } from "@lib/gtag";
 import Document, { Head, Html, Main, NextScript } from "next/document";
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: any) {
     const initialProps = await Document.getInitialProps(ctx);
 
     // Check if in production
